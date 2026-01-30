@@ -51,7 +51,6 @@
   <link rel="stylesheet" href="frontend/css/home.css" />
 
   <style>
-   
     #scrollTopBtn {
       display: flex !important;
       /* Enables Flexbox centering */
@@ -78,9 +77,35 @@
       /* Gold border */
       border-color: rgba(255, 215, 0, 0.8) !important;
     }
+    
+    /* --- NEW: Golden Glow Hover Effect for Milestone Stats Cards --- */
+    .stats .stat-card {
+      transition: all 0.3s ease-in-out;
+      border-radius: 12px; /* Ensures glow follows rounded corners if present */
+    }
+
+    .stats .stat-card:hover {
+      /* Stronger Golden Glow from the back */
+      box-shadow: 0 0 40px rgba(255, 215, 0, 0.5) !important;
+      transform: translateY(-5px);
+      z-index: 2; /* Ensures it pops out above neighbors */
+    }
+
+    /* --- FIX: Timeline Z-Index Layering --- */
+    /* This ensures the golden icons sit ON TOP of the connecting vertical line */
+    .compass-step .compass-icon {
+      position: relative;
+      z-index: 10;
+    }
+
+    /* Ensure the timeline line stays in the back */
+    .compass-timeline {
+      position: relative;
+      z-index: 1;
+    }
   </style>
   <link rel="stylesheet" href="frontend/css/recommendations.css" />
- 
+
 </head>
 
 <body>
@@ -155,10 +180,6 @@
         </div>
       </div>
 
-      <div class="card">
-        <h4>Community Driven</h4>
-        <p>Built by contributors, improved by contributors.</p>
-      </div>
     </div>
 </section>
 <section id="opensource-video" style="padding: 60px 20px; text-align: center;">
@@ -272,6 +293,16 @@
               Understand codes of conduct, collaboration etiquette, and how
               contributors earn trust and respect.
             </p>
+          </div>
+        </div>
+
+        <div class="compass-step">
+          <div class="compass-icon">
+            <i class="fas fa-people-group"></i>
+          </div>
+          <div class="compass-content">
+            <h4>Community Driven</h4>
+            <p>Built by contributors, improved by contributors.</p>
           </div>
         </div>
 
