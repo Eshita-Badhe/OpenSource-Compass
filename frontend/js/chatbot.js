@@ -159,6 +159,9 @@ function parseMarkdown(text) {
         text = text.replace(regex, '<strong>$1</strong>');
     });
 
+    // Preserve line breaks
+    text = text.replace(/\n/g, "<br>");
+    
     return text;
 }
 
