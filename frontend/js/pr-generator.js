@@ -350,7 +350,7 @@ async function handlePRGeneration(submitBtn, previewSection, textarea) {
                 testing,
                 limitations,
                 projectRequirements,
-                structureSettings
+                structureSettings,
                 // AI Assist parameters
                 aiAssist: {
                     creativity: aiAssistState.creativity,

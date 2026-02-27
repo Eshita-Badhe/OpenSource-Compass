@@ -401,6 +401,11 @@
 }
 
 .pr-structure-toggle-right {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
 /* ===========================
    AI Assist Controls
    =========================== */
@@ -473,6 +478,11 @@
 }
 
 .pr-structure-chevron {
+    color: #94a3b8;
+    font-size: 0.8rem;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .ai-assist-badge {
     background: linear-gradient(135deg, var(--pr-gold-primary), var(--pr-gold-secondary));
     color: var(--pr-navy);
@@ -497,14 +507,17 @@
 /* Expandable Panel */
 .pr-structure-panel {
     max-height: 0;
+    opacity: 0;
+    visibility: hidden;
     overflow: hidden;
-    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
-        padding 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     padding: 0 1.4rem;
 }
 
 .pr-structure-panel.open {
-    max-height: 600px;
+    max-height: 800px;
+    opacity: 1;
+    visibility: visible;
     padding: 0.8rem 1.4rem 1.4rem;
 }
 
@@ -605,6 +618,13 @@
     position: absolute;
     width: 18px;
     height: 18px;
+    left: 3px;
+    bottom: 3px;
+    background: #e2e8f0;
+    border-radius: 50%;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .ai-assist-panel.open .ai-assist-chevron {
     transform: rotate(180deg);
 }
@@ -612,13 +632,17 @@
 /* Collapsible Body */
 .ai-assist-body {
     max-height: 0;
+    opacity: 0;
+    visibility: hidden;
     overflow: hidden;
-    transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1), padding 0.35s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     padding: 0 1.4rem;
 }
 
 .ai-assist-panel.open .ai-assist-body {
-    max-height: 800px;
+    max-height: 1000px;
+    opacity: 1;
+    visibility: visible;
     padding: 1.2rem 1.4rem 1.6rem;
 }
 
@@ -1086,7 +1110,9 @@
     .pr-format-strip {
         gap: 1px;
         padding: 0.35rem 0.4rem;
+    }
 }
+
 
 .ai-switch input:checked+.ai-switch-slider {
     background: linear-gradient(135deg, var(--pr-gold-primary), var(--pr-gold-secondary));
