@@ -1955,6 +1955,27 @@
         .highlight::after {
          border: none !important;
         }
+
+        /* =========================
+        FIX ELIGIBILITY DARK TEXT
+        ========================= */
+
+        body.dark-mode .eligibility-card {
+            color: var(--text-primary);
+        }
+
+        body.dark-mode .eligibility-card h3 {
+            color: var(--text-primary);
+        }
+
+        body.dark-mode .eligibility-card ul,
+        body.dark-mode .eligibility-card p {
+            color: var(--text-secondary);
+        }
+
+        body.dark-mode .eligibility-card ul li {
+            color: var(--text-secondary);
+        }
         
     </style>
     <link rel='manifest' href='../../../manifest.json' />
