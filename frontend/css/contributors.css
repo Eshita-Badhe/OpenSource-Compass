@@ -968,6 +968,7 @@ body.dark-mode .contributors-section p {
 
 /* =========================================
    SKELETON LOADING ANIMATION
+ =========================================*/
 .contributor-skeleton {
     background: #fff;
     border: 1px solid #eee;
@@ -1011,6 +1012,7 @@ body.dark-mode .contributors-section p {
 
 /* =========================================
    DARK MODE OVERRIDES (The Fix)
+ =========================================*/
 body.dark-mode .contributor-card {
     background-color: #1e1e1e !important;
     border-color: #333 !important;
@@ -1060,7 +1062,7 @@ body.dark-mode .sk {
 
 /* =========================================
    CONTRIBUTORS STATS
-
+ =========================================*/
 .contributors-stats {
   display: flex;
   justify-content: center;
@@ -1120,7 +1122,7 @@ body.dark-mode .sk {
 
 /* =========================================
    TOP CONTRIBUTOR – ENHANCED
-
+ =========================================*/
 .stat-pill.stat-top {
   background: linear-gradient(180deg, #e6c453, #fdeeb5);
   border-color: #d4af37;
@@ -1142,7 +1144,7 @@ body.dark-mode .sk {
 
 /* =========================================
    CONTRIBUTORS CONTROLS
-
+ =========================================*/
 .contributors-controls {
   display: flex;
   justify-content: center;
@@ -1267,7 +1269,7 @@ body.dark-mode .sk {
 
 /* =========================================
    RESPONSIVE
-
+ =========================================*/
 @media (max-width: 768px) {
   .contributors-stats {
     gap: 0.75rem;
@@ -1512,7 +1514,7 @@ body.dark-mode .stat-label {
 
 /* =========================================
    DARK MODE
-
+ =========================================*/
 body.dark-mode .stat-pill {
   background: linear-gradient(180deg, #ffffff, #ffe9a9);
   border-color: #d5c63e;
@@ -1548,7 +1550,7 @@ body.dark-mode #contributor-search {
 
 /* =========================================
    ANIMATION
-
+ =========================================*/
 @keyframes statFadeUp {
   to {
     opacity: 1;
@@ -1558,7 +1560,7 @@ body.dark-mode #contributor-search {
 
 /* ==========================
    Enhance contributors UI 
-
+ =========================================*/
 .dark-mode {
   --contributors-bg: #0f172a;
   --contributors-card: #111827;
